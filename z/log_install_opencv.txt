@@ -1,0 +1,40 @@
+    cmake -D CMAKE_BUILD_TYPE=Release -D CMAKE_INSTALL_PREFIX=/usr/local -D BUILD_WITH_DEBUG_INFO=OFF -D BUILD_EXAMPLES=ON -D BUILD_opencv_python2=OFF -D BUILD_opencv_python3=ON -D INSTALL_PYTHON_EXAMPLES=ON -D OPENCV_EXTRA_MODULES_PATH=../../opencv_contrib/modules/ -D WITH_TBB=ON -D WITH_V4L=ON ../ 2>&1 | tee cmake_messages.txt
+
+
+
+
+  278  cmake -D CMAKE_BUILD_TYPE=Release 
+  -D CMAKE_INSTALL_PREFIX=/usr/local 
+  -D BUILD_WITH_DEBUG_INFO=OFF -D BUILD_EXAMPLES=ON -D BUILD_opencv_python2=OFF -D BUILD_opencv_python3=ON -D INSTALL_PYTHON_EXAMPLES=ON -D OPENCV_EXTRA_MODULES_PATH=../../opencv_contrib/modules/ -D WITH_TBB=ON -D WITH_V4L=ON ../ 2>&1 | tee cmake_messages.txt
+  279  ll
+  280  pwd
+  281  nproc 
+  282  make -j8 2>&1 | build_messages.txt
+  283  make -j8 2>&1 | tee build_messages.txt
+  284  pushd .
+  285  ll
+  286  cd bin/
+  287  ll
+  288  ls
+  289  ./example_text_webcam_demo 
+  290  ./opencv_test_video
+  291  ls
+  292  ./example_face_sampleDetectLandmarksvideo 
+  293  cd ..
+  294  sudo make install
+  295  sudo ldconfig
+  296  pkg-config --modversion openv
+  297  pkg-config --modversion opencv
+  298  cd ..
+  299  ll
+  300  cd samples/
+  301  ll
+  302  mkdir thomas
+  303  cd thomas/
+  304  vi first_sample.cpp
+  305  vi Makefile
+  306  ll
+  307  make
+  308  vi my_first_opencv.cpp 
+  309  make
+  311  ./my_first_opencv 
