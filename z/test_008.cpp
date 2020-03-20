@@ -12,7 +12,7 @@ using namespace std;
 int main()
 {
     Mat image = imread("lena.png");
-    Rect rect(0, 0, 150, 100);
+    Rect rect(100, 30, 250, 300);   // start pos (x0,y0), width, height
     Mat rect_roi = image(rect);
     imshow("rectROI", rect_roi);
 
