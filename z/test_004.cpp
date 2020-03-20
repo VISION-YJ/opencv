@@ -23,7 +23,7 @@ int main()
             cout << "end of video" << endl;
             break;
         }
-        imshow("vdeo", frame);
+        imshow("video", frame);
         waitKey(33);
     }
 }
