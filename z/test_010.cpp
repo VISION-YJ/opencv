@@ -11,14 +11,16 @@ using namespace std;
 
 int main()
 {
-    Mat image = imread("lena.jpg");
+    Mat image = imread("lena.png");
     cvtColor(image, image, CV_BGR2GRAY);
     Mat dst;
-    threshold(image, dst, 100, 155, THRESH_BINARY);
+
+    // double threshold(Mat src, Mat dst, double thresh, double maxval, int type)
+    threshold(image, dst, 100, 255, THRESH_BINARY_INV);
 
     imshow("dst", dst);
     imshow("image", image);
-    
+
     waitKey(0);
     return 0;
 }
