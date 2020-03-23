@@ -1,6 +1,6 @@
 // http://www.kocw.or.kr/home/search/kemView.do?kemId=1317915&ar=relateCourse
 // Mat Operator
-// inRange ()
+// convertTo(), setTo(), convertScaleAbs()
 
 #include "opencv2/opencv.hpp"
 #include <iostream>
